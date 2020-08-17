@@ -14,35 +14,35 @@ spring:
    application:
     name: microservicecloud-config-dept-client
    datasource:
-    type: com.alibaba.druid.pool.DruidDataSource          # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-    #driver-class-name: org.gjt.mm.mysql.Driver            # mysql Çı¶¯°ü
-    url: jdbc:mysql://localhost:3306/clouddb01?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8           # Êı¾İ¿âÃû³Æ    
+    type: com.alibaba.druid.pool.DruidDataSource          # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+    #driver-class-name: org.gjt.mm.mysql.Driver            # mysql é©±åŠ¨åŒ…
+    url: jdbc:mysql://localhost:3306/clouddb01?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8           # æ•°æ®åº“åç§°    
     username: root
     password: root
     dbcp2:
-      min-idle: 5                                         # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 5                                     # ³õÊ¼»¯Á¬½ÓÊı
-      max-total: 5                                        # ×î´óÁ¬½ÓÊı
-      max-wait-millis: 200                                # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 5                                         # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 5                                     # åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 5                                        # æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200                                # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 
 
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml      # mybatis ÅäÖÃÎÄ¼şËùÔÚµÄÂ·¾¶
-  type-aliases-package:  com.atguigu.springcloud.entities # ËùÓĞEntity ±ğÃûÀàËùÔÚµÄ°ü
+  config-location: classpath:mybatis/mybatis.cfg.xml      # mybatis é…ç½®æ–‡ä»¶æ‰€åœ¨çš„è·¯å¾„
+  type-aliases-package:  com.atguigu.springcloud.entities # æ‰€æœ‰Entity åˆ«åç±»æ‰€åœ¨çš„åŒ…
   mapper-locations:
-  - classpath:mybatis/mapper/**/*.xml                     # mapper Ó³ÉäÎÄ¼ş
+  - classpath:mybatis/mapper/**/*.xml                     # mapper æ˜ å°„æ–‡ä»¶
 
 
 
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
-       defaultZone: http://localhost:7001/eureka  #µ¥»ú°æ
-#      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/     #¼¯Èº
+       defaultZone: http://localhost:7001/eureka  #å•æœºç‰ˆ
+#      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/     #é›†ç¾¤
   instance:
-    instance-id: dept-8001     #×Ô¶¨Òå·şÎñĞÅÏ¢Ãû³Æ
-    prefer-ip-address: true #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾ipµØÖ·
-    #×¢²áÖĞĞÄµÄinfoĞÅÏ¢
+    instance-id: dept-8001     #è‡ªå®šä¹‰æœåŠ¡ä¿¡æ¯åç§°
+    prefer-ip-address: true #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºipåœ°å€
+    #æ³¨å†Œä¸­å¿ƒçš„infoä¿¡æ¯
 info:
   app.name: atguigu-microservicecloud
   company.name: www.atguigu.com
@@ -54,35 +54,35 @@ info:
   port: 8001
   
 mybatis:
-  config-location: classpath:mybatis/mybatis.cfg.xml      # mybatis ÅäÖÃÎÄ¼şËùÔÚµÄÂ·¾¶
-  type-aliases-package:  com.atguigu.springcloud.entities # ËùÓĞEntity ±ğÃûÀàËùÔÚµÄ°ü
+  config-location: classpath:mybatis/mybatis.cfg.xml      # mybatis é…ç½®æ–‡ä»¶æ‰€åœ¨çš„è·¯å¾„
+  type-aliases-package:  com.atguigu.springcloud.entities # æ‰€æœ‰Entity åˆ«åç±»æ‰€åœ¨çš„åŒ…
   mapper-locations:
-  - classpath:mybatis/mapper/**/*.xml                     # mapper Ó³ÉäÎÄ¼ş
+  - classpath:mybatis/mapper/**/*.xml                     # mapper æ˜ å°„æ–‡ä»¶
   
 spring:
    profiles: test
    application:
     name: microservicecloud-config-dept-client
    datasource:
-    type: com.alibaba.druid.pool.DruidDataSource          # µ±Ç°Êı¾İÔ´²Ù×÷ÀàĞÍ
-#    driver-class-name: org.gjt.mm.mysql.Driver            # mysql Çı¶¯°ü
-    url: jdbc:mysql://localhost:3306/clouddb02?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8           # Êı¾İ¿âÃû³Æ    
+    type: com.alibaba.druid.pool.DruidDataSource          # å½“å‰æ•°æ®æºæ“ä½œç±»å‹
+#    driver-class-name: org.gjt.mm.mysql.Driver            # mysql é©±åŠ¨åŒ…
+    url: jdbc:mysql://localhost:3306/clouddb02?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8           # æ•°æ®åº“åç§°    
     username: root
     password: root
     dbcp2:
-      min-idle: 5                                         # Êı¾İ¿âÁ¬½Ó³ØµÄ×îĞ¡Î¬³ÖÁ¬½ÓÊı
-      initial-size: 5                                     # ³õÊ¼»¯Á¬½ÓÊı
-      max-total: 5                                        # ×î´óÁ¬½ÓÊı
-      max-wait-millis: 200                                # µÈ´ıÁ¬½Ó»ñÈ¡µÄ×î´ó³¬Ê±Ê±¼ä
+      min-idle: 5                                         # æ•°æ®åº“è¿æ¥æ± çš„æœ€å°ç»´æŒè¿æ¥æ•°
+      initial-size: 5                                     # åˆå§‹åŒ–è¿æ¥æ•°
+      max-total: 5                                        # æœ€å¤§è¿æ¥æ•°
+      max-wait-millis: 200                                # ç­‰å¾…è¿æ¥è·å–çš„æœ€å¤§è¶…æ—¶æ—¶é—´
 eureka:
-  client: #¿Í»§¶Ë×¢²á½øeureka·şÎñÁĞ±íÄÚ
+  client: #å®¢æˆ·ç«¯æ³¨å†Œè¿›eurekaæœåŠ¡åˆ—è¡¨å†…
     service-url:
-       defaultZone: http://localhost:7001/eureka  #µ¥»ú°æ
-#      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/     #¼¯Èº
+       defaultZone: http://localhost:7001/eureka  #å•æœºç‰ˆ
+#      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/     #é›†ç¾¤
   instance:
-    instance-id: dept-8002     #×Ô¶¨Òå·şÎñĞÅÏ¢Ãû³Æ
-    prefer-ip-address: true #·ÃÎÊÂ·¾¶¿ÉÒÔÏÔÊ¾ipµØÖ·
-    #×¢²áÖĞĞÄµÄinfoĞÅÏ¢
+    instance-id: dept-8002     #è‡ªå®šä¹‰æœåŠ¡ä¿¡æ¯åç§°
+    prefer-ip-address: true #è®¿é—®è·¯å¾„å¯ä»¥æ˜¾ç¤ºipåœ°å€
+    #æ³¨å†Œä¸­å¿ƒçš„infoä¿¡æ¯
 info:
   app.name: atguigu-microservicecloud
   company.name: www.atguigu.com
