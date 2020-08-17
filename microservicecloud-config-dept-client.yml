@@ -51,7 +51,7 @@ info:
 
   ---
   server:
-  port: 8002
+  port: 8001
   
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml      # mybatis 配置文件所在的路径

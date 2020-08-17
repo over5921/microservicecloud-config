@@ -11,7 +11,7 @@ spring:
   application:
     name: microservicecloud-config-eureka-client
 eureka:
-  insrance:
+  instance:
     hostname: eureka7001.com #冒号后面必须要有空格
   client:
     register-with-eureka: false # 当前eureka-server 自己不注册进服务列表中
@@ -26,7 +26,7 @@ spring:
   application:
     name: microservicecloud-config-eureka-client
 eureka:
-  insrance:
+  instance:
     hostname: eureka7001.com #冒号后面必须要有空格
   client:
     register-with-eureka: false # 当前eureka-server 自己不注册进服务列表中
