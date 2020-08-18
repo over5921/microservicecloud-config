@@ -23,11 +23,11 @@ spring:
       max-wait-millis: 200                                # 等待连接获取的最大超时时间
 
 
-mybatis:
-   config-location: classpath:mybatis/mybatis.cfg.xml      # mybatis 配置文件所在的路径
-   type-aliases-package:  com.atguigu.springcloud.entities # 所有Entity 别名类所在的包
-   mapper-locations:
-   - classpath:mybatis/mapper/**/*.xml                     # mapper 映射文件
+#mybatis:
+#   config-location: classpath:mybatis/mybatis.cfg.xml      # mybatis 配置文件所在的路径
+##   type-aliases-package:  com.atguigu.springcloud.entities # 所有Entity 别名类所在的包
+ #  mapper-locations:
+ #  - classpath:mybatis/mapper/**/*.xml                     # mapper 映射文件
 
 
 
