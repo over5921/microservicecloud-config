@@ -33,7 +33,7 @@ mybatis:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-       defaultZone: http://localhost:7001/eureka  单机版
+       defaultZone: http://localhost:7001/eureka  
   instance:
     instance-id: dept-8001     #自定义服务信息名称
     prefer-ip-address: true #访问路径可以显示ip地址
